@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RoboPage</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="icon" type="svg" href="undraw_Firmware.svg" />
+  </head>
+  <body>
+    <div>
+      <h1 id="robo-text">Robot Friend</h1>
+    </div>
+    <div class="robots">
+      <div class="android">
+        <div class="head" id="head">
+          <div class="eyes">
+            <div class="left_eye"></div>
+            <div class="right_eye"></div>
+          </div>
+        </div>
+        <div class="upper_body">
+          <div class="left_arm" id="left_arm">
+            <div class="player-controls seek-previous">
+              <i class="fas fa-backward" title="previous" id="prev"></i>
+            </div>
+          </div>
+          <div class="torso" id="torso">
+            <audio src="music/jacinto-1.mp3" hidden></audio>
+            <!-- player controls -->
+            <div class="player-controls">
+              <i class="fas fa-play main-button" title="play" id="play"></i>
+            </div>
+          </div>
+          <div class="right_arm">
+            <div class="player-controls seek-next">
+              <i class="fas fa-forward" title="next" id="next"></i>
+            </div>
+          </div>
+        </div>
+        <div class="lower_body">
+          <div class="left_leg" id="left_leg"></div>
+          <div class="right_leg"></div>
+        </div>
+      </div>
+    </div>
+    <!-- progress bar -->
+    <div class="progress-container" id="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <!-- song time info update - currentTime and duration -->
+    <div class="time-info">
+      <span id="current-time"></span>
+      <span id="duration"></span>
+    </div>
+
+    <!-- song - info - update -->
+    <div class="song-info-container" id="song-info-container" hidden>
+      <h1 id="artist">jacinto</h1>
+      <h2 id="song-title">Electric Chill Machine</h2>
+    </div>
+
+    <!-- script -->
+    <script src="script.js"></script>
+  </body>
+</html>

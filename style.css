@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+:root {
+  --box-shadow: 1px 2px 10px 5px rgba(255, 255, 255, 0.5);
+}
+
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: Oswald, sans-serif;
+  background-color: aliceblue;
+}
+
+h1 {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.robots {
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.head,
+.left_arm,
+.torso,
+.right_arm,
+.left_leg,
+.right_leg {
+  background-color: #5f93e8;
+}
+
+.head {
+  width: 200px;
+  margin: 0 auto;
+  height: 150px;
+  border-radius: 200px 200px 0 0;
+  margin-bottom: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.eyes {
+  display: flex;
+}
+
+.head:hover {
+  transition: 0.4s ease-in;
+  transform: rotate3d(0, 1, 0.5, 20deg);
+}
+
+.upper_body {
+  width: 300px;
+  height: 150px;
+  display: flex;
+}
+
+.left_arm,
+.right_arm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50px;
+  height: 125px;
+  border-radius: 100px;
+  box-shadow: var(--box-shadow);
+}
+.left_arm:hover {
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+.right_arm:hover {
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+.left_arm {
+  margin-right: 10px;
+}
+
+.right_arm {
+  margin-left: 10px;
+}
+
+.torso {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 0 0 50px 50px;
+  box-shadow: var(--box-shadow);
+}
+.fas {
+  padding: 50px 0px;
+  font-size: 30px;
+  color: aliceblue;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.fas:hover {
+  transform: scale(1.2);
+}
+.main-button {
+  font-size: 60px;
+}
+.lower_body {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.left_leg,
+.right_leg {
+  width: 40px;
+  height: 120px;
+  border-radius: 0 0 100px 100px;
+  box-shadow: var(--box-shadow);
+}
+
+.left_leg {
+  margin-left: 45px;
+}
+
+.left_leg:hover {
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+.right_leg {
+  margin-left: 30px;
+}
+
+.left_eye,
+.right_eye {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.left_eye {
+  position: relative;
+  top: 100px;
+  left: 40px;
+}
+
+.right_eye {
+  position: relative;
+  top: 100px;
+  left: 120px;
+}
+/* progress bar */
+.progress-container {
+  z-index: 10;
+  padding: 1px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 500px;
+  height: 2px;
+  box-shadow: var(--box-shadow);
+}
+.progress-bar {
+  z-index: 1;
+  background-color: red;
+  height: 1px;
+  width: 0%;
+}
+
+/* playback info - currentTime and duration update styles */
+
+.time-info {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* song -info -update */
+.song-info-container {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  padding: 10px;
+  min-width: 300px;
+  height: 120px;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  opacity: 0.5;
+  animation: slide 5s ease-in-out reverse;
+}
+.song-info-container h1,
+.song-info-container h2 {
+  margin: 5px;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.song-info-container h2 {
+  font-size: 30px;
+}
+
+.info-update {
+  animation: slide 5s ease-in-out forwards;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
+
+/* dance animation */
+.rotate_20_left {
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+.rotate_5_left {
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+.rotate_3d_left {
+  -webkit-transform: rotate3d(0, 1, 0.5, 5deg);
+  -moz-transform: rotate3d(0, 1, 0.5, 5deg);
+  -o-transform: rotate3d(0, 1, 0.5, 5deg);
+  -ms-transform: rotate3d(0, 1, 0.5, 5deg);
+  transform: rotate3d(0, 1, 0.5, 5deg);
+}

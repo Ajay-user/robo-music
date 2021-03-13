@@ -62,12 +62,12 @@ const loadSong = (song) => {
   artist.innerText = `${song.artist}`;
   title.innerText = `${song.displayName}`;
   roboText.innerText = `${song.displayName}`;
-  playMusic();
 };
 
 // play / pause music on click
 const playMusic = () => {
   isPlaying = true;
+  loadSong(songs[currentSongIndex]);
   music.play();
   toggleSongInfo();
   playBtn.classList.replace("fa-play", "fa-pause");
@@ -84,14 +84,14 @@ const prevSong = () => {
   if (currentSongIndex < 0) {
     currentSongIndex = songs.length - 1;
   }
-  loadSong(songs[currentSongIndex]);
+  playMusic();
 };
 const nextSong = () => {
   currentSongIndex++;
   if (currentSongIndex > 3) {
     currentSongIndex = 0;
   }
-  loadSong(songs[currentSongIndex]);
+  playMusic();
 };
 
 // percentage calculator

@@ -20,6 +20,10 @@ body {
   background-color: aliceblue;
 }
 
+.page-title {
+  height: 50px;
+}
+
 h1 {
   text-align: center;
   margin: 0px;
